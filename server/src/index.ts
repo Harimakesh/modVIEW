@@ -11,8 +11,10 @@ import bodyParser from "body-parser";
 import { UserResolver } from "./resolvers/user";
 
 const main = async () => {
+  // Your mongo connection
   await connect("mongodb://127.0.0.1:27017/test");
-
+  
+  // token for current auth
   interface MyContext {
     token?: string;
   }
