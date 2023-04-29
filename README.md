@@ -1,9 +1,16 @@
 # modVIEW
  Model Viewer for glb/gltf files. Load any glb/gltf file and be able to switch between its different available, if present. Made possible using `<model-viewer>` which runs on top of three js. For further capabilities of model-viewer visit https://modelviewer.dev/.
  
-
-
- 
+## How?
+```             
+                (urql)   
+  | Frontend |  ------->  | Backend (Apollo server with express as middleware) |  
+    
+                 (response to urql)  
+  | Frontend |  <------------------  | Backend (Node) |              
+ ```
+   * Backend response is a report that returns the user if valid else error.
+   * Depending on the response formik notifies the user on validation.
 ## Server
 ### Instructions to setup the backend
    * `npm install` or `yarn add` to install all the necessary packages.
@@ -22,6 +29,15 @@
     /(-_-) /  `<any>`  \ (-\_-)\
    * Can add session or token authentication.
    * Can add more features by directly implementing the viewer using three js.
+   * The webpage is not responsive.(only maintains symmetry on 1920x1080 res)
 
-##Thanks to 
+## Thanks to 
    * benawad for this tut https://youtu.be/I6ypD7qv3Z8 on graphql.
+
+## Also
+  * For mongo DB connection you can use any method.
+  * https://www.mongodb.com/try/download/community (suggested).
+  * https://typegoose.github.io/typegoose/docs/guides/quick-start-guide (typegoose).
+  * https://the-guild.dev/graphql/codegen (codegen for graphql).
+  * https://formidable.com/open-source/urql/ (urql).
+  * https://www.apollographql.com/docs/apollo-server/getting-started/ (Apollo)
