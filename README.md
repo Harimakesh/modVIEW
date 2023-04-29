@@ -1,5 +1,5 @@
 # modVIEW
- Model Viewer for glb/gltf files. Load any glb/gltf file and be able to switch between its different available, if present. For further capabilities of model-viewer visit https://modelviewer.dev/
+ Model Viewer for glb/gltf files. Load any glb/gltf file and be able to switch between its different available, if present. Made possible using <model-viewer> which runs on top of three js. For further capabilities of model-viewer visit https://modelviewer.dev/.
  
 ## Server
 ### Instructions to setup the backend
